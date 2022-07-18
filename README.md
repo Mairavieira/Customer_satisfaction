@@ -7,6 +7,4 @@ The objective of this project is to analyze the evaluation score of e-commerce c
 
 - ``Python``
 - ``Pandas/Matplotlib/Seaborn``
-- ``Data cleaning``
-
-
+- ``Data cleaning for analysis``
