@@ -61,14 +61,8 @@ df_ecommerce = df_ecommerce[['order_status','order_purchase_timestamp','order_de
 
 df_ecommerce = df_ecommerce.rename(columns={'product_category_name_english': 'product_category'})
 
-#Checking the number of rows and columns of the resulting dataset
-df_ecommerce.shape
-
 #removing columns with NULL value
 df_ecommerce.isnull().sum()
 df_ecommerce.dropna(how='any',inplace=True)
 
-#Converting data and time columns
-cols = ['order_purchase_timestamp', 'order_estimated_delivery_date', 'order_delivered_customer_date', 'shipping_limit_date']
-for col in cols:
-    df_ecommerce[col] = pd.to_datetime(df_ecommerce[col]).dt.date
+
