@@ -63,3 +63,38 @@ plt.xlim([0,2000])
 #Generating graphics of payment types with seaborn
 sns.histplot( x='payment_type', data=df_ecommerce)
 
+#Bar graph definition of "The 10 most purchased products by customers"
+fig = plt.figure(figsize = fig_size)
+
+sns.barplot(x = df_ecommerce.product_category.value_counts().index[:10], 
+            y = df_ecommerce.product_category.value_counts()[:10])
+
+#"The 10 most purchased products by customers"
+plt.xlabel('Product category', fontsize = font_size)
+plt.ylabel('Order quantity', fontsize = font_size)
+plt.title("The 10 most purchased products by customers", fontsize = title_font_size)
+
+plt.show()
+
+#Bar graph definition for graphs
+def bar_plot_df(x_var, y_var, title):
+  fig = plt.figure(figsize = fig_size)
+  sns.barplot(x = x_var, 
+              y = y_var, data=df_ecommerce)
+ 
+  plt.xlabel(x_var, fontsize = font_size)
+  plt.ylabel(y_var, fontsize = font_size)
+  plt.title(title, fontsize = title_font_size)
+  plt.show()
+  
+  #Payment amount per customer based on payment type
+  bar_plot_df('payment_type', 'payment_value', 'Payment amount per customer based on payment type')
+  
+  #Customer rating based on transaction value
+  bar_plot_df('review_score', 'payment_value', 'Customer rating based on transaction value')
+  
+  #Customer rating based on the value of each item
+  bar_plot_df('review_score', 'price', 'Customer rating based on the value of each item')
+  
+  #Customer rating based on shipping cost
+  bar_plot_df('review_score', 'freight_value', 'Customer rating based on shipping cost')
