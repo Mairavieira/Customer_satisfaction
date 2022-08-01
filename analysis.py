@@ -49,20 +49,5 @@ B.head()
 df_ecommerce = pd.merge(A, B, on = 'order_id')
 df_ecommerce.head()
 
-#Checking column names from the resulting dataset
-df_ecommerce.columns
-
-#Selecting desired columns and renaming
-df_ecommerce = df_ecommerce[['order_status','order_purchase_timestamp','order_delivered_customer_date','order_estimated_delivery_date',
-                              'shipping_limit_date','payment_sequential','payment_type','payment_installments','payment_value',
-                              'price','freight_value','product_category_name_english','product_name_lenght','product_description_lenght',
-                               'product_photos_qty','review_score']]
-
-
-df_ecommerce = df_ecommerce.rename(columns={'product_category_name_english': 'product_category'})
-
-#removing columns with NULL value
-df_ecommerce.isnull().sum()
-df_ecommerce.dropna(how='any',inplace=True)
 
 
