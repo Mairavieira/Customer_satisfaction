@@ -1,9 +1,0 @@
-##graphics with the seaborn library
-sns.histplot(x='review_score', data=df_ecommerce)
-
-sns.histplot(x='estimated_days', data=df_ecommerce)
-
-sns.histplot(x='payment_value', data=df_ecommerce)
-plt.xlim([0,2000])
-
-sns.histplot( x='payment_type', data=df_ecommerce)
