@@ -33,6 +33,7 @@ sellers.head()
 product_translation = pd.read_csv(diretorio + 'product_category_name_translation.csv')
 product_translation
 
+
 #Merge all consumer datasets
 A = pd.merge(orders, order_reviews, on='order_id')
 A = pd.merge(A, order_payments,on='order_id')
@@ -49,5 +50,16 @@ B.head()
 df_ecommerce = pd.merge(A, B, on = 'order_id')
 df_ecommerce.head()
 
+#Generating graphics of review'score with seaborn
+sns.histplot(x='review_score', data=df_ecommerce)
 
+#Generating graphics of estimated days of delivered with seaborn
+sns.histplot(x='estimated_days', data=df_ecommerce)
+
+#Generating graphics of payment values with seaborn
+sns.histplot(x='payment_value', data=df_ecommerce)
+plt.xlim([0,2000])
+
+#Generating graphics of payment types with seaborn
+sns.histplot( x='payment_type', data=df_ecommerce)
 
