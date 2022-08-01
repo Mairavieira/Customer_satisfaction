@@ -19,8 +19,13 @@ The objective of this project is analyze the evaluation score of e-commerce cons
 
 -Insights after analysis:
 1)The main items purchased are from the categories of bed, table and bath, health and beauty, sports and leisure, furniture and decoration and computer accessories;
+
 2)Bed, table and bath received more than 10 thousand requests;
+
 3)Credit cards have the highest payment value, followed by boleto, debit cards and vouchers;
+
 4)The valuation increases slightly as the payment amount decreases;
+
 5)Price value appears to have no effect on consumer evaluation;
+
 6)The customer will likely give you a better rating as the shipping cost goes down.
