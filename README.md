@@ -18,6 +18,7 @@ The objective of this project is analyze the evaluation score of e-commerce cons
 -Data can be downloaded here: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 -Insights after analysis:
+
 1)The main items purchased are from the categories of bed, table and bath, health and beauty, sports and leisure, furniture and decoration and computer accessories;
 
 2)Bed, table and bath received more than 10 thousand requests;
